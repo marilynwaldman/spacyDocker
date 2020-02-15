@@ -12,6 +12,26 @@ docker run --name spacy -i -t -p  8888:8888 my-spacy /bin/bash -c "/opt/conda/bi
 
 ## Check out this tutorial to see if this is running
 
+https://spacy.io/usage
+
+## To get around the import spacy
+                     
+                     spacy.prefer_gpu()
+                     nlp = spacy.load("en_core_web_sm")
+                     
+issues run this from the notebook:
+
+'!pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz'
+
+then:
+
+'import en_core_web_sm'
+
+'nlp = en_core_web_sm.load()'
+
+per this:
+https://github.com/explosion/spaCy/issues/4577
+
 
 
 ## Stop container and remove before re-running
