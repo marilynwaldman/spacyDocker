@@ -17,4 +17,5 @@ docker run --name spacy -i -t -p  8888:8888 my-spacy /bin/bash -c "/opt/conda/bi
 ## Stop container and remove before re-running
 
 `docker stop spacy`
+
 `docker rm spacy`
