@@ -9,4 +9,11 @@ RUN pip install annoy
 RUN conda config --add channels conda-forge
 RUN conda install -c conda-forge --yes spacy
 
+RUN python -m spacy download en_core_web_sm
+
+RUN conda config --add channels anaconda
+RUN conda install -c anaconda --yes graphviz python-graphviz
+
+RUN pip install pytextrank
+
 
